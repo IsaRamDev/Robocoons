@@ -1,11 +1,16 @@
 import './index.css'
+import Logo from "./assets/logo192.png" 
+import LogoFirstLego from "./assets/first-lego-logo.png" 
+import LogoVertical from "./assets/robocoons-logo2.png" 
+import Team from "./assets/hero.jpeg"
 
 function App() {
   const year = new Date().getFullYear();
   return (
-    <>
-      <nav id="navbar" className="nav">
-        <ul className="nav-list">
+    <div className="m-o">
+      <nav id="navbar" className="flex justify-between items-center w-full pl-10 pr-20 text-lg">
+        <img src={Logo} alt="logo" className="h-32 w-auto" />
+        <ul className="flex space-x-28">
           <li>
             <a href="#welcome-section">Inicio</a>
           </li>
@@ -20,40 +25,42 @@ function App() {
           </li>
         </ul>
         <a href="https://github.com/NeftaliVenancio/Robocoons-FLL-Challenge" className="text-base font-normal text-gray-600 dark:text-gray-300" target="_blank" rel="noreferrer">
-          <svg stroke="currentColor" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 16 16" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
           </svg>
         </a>
       </nav>
-      <section id="welcome-section" className="welcome-section">
-        <img src="https://robocoons.vercel.app/robocoons-logo2.png" alt="team" />
-        <img src="https://robocoons.vercel.app/hero.jpeg" alt="team" />
-      </section>
-      <section id="welcome-section" className="welcome-section">
-        <p>Bienvenido a nuestro sitio web</p>
-        <p>un equipo de estudiantes apasionados por la robótica y la tecnología, y queremos compartir nuestra experiencia contigo.</p>
-        <a href="https://drive.google.com/file/d/1zHs7kh_D_7befzZAVY0BcfwB2R5L8w4C/view" target="_blank" rel="noreferrer">
-          <span className="text-base font-bold text-white p-1.5 md:p-3 bg-green-500 rounded-xl hover:bg-green-900 ">Documentación </span>
+      
+      <section className="text-center">
+        <a href="https://drive.google.com/file/d/1zHs7kh_D_7befzZAVY0BcfwB2R5L8w4C/view" target="_blank" rel="noreferrer" className="bg-green-500 text-white rounded px-4 py-2 mt-4 hover:bg-green-700 block text-center">
+          Documentación
         </a>
       </section>
-      <section id="welcome-section" className="welcome-section">
-        <h1>Historia</h1>
-        <div className='flex'>
-          <div>
+
+      <section className="text-center">
+        <img src={LogoVertical} alt="Logo" className=' mx-auto' />
+        <img src={Team} alt="main" className="mx-auto" />
+      </section>
+
+      <section className='m-5'>
+        <h1 className="text-4xl font-bold text-center mb-10">Historia</h1>
+        <div className="space-y-10"> 
+          <div className='border-l-2 border-b-2 border-black p-3 ml-10 max-w-2xl'>
             <p>Se inició a estudiar la plataforma en Septiembre del 2001. En Febrero del 2002, el taller de Robótica empezó como el primer taller vespertino impartido por Profesores en el Colegio Las Hayas.</p>
           </div>
-          <div>
-            <p>En el 2004 llega la primera competencia de FLL a México gracias a Bárbara Gómez de Navarro, lo que nos permitió participar. </p>
+          <div className='border-l-2 border-b-2 border-black p-3 ml-36 max-w-2xl'>
+            <p>En el 2004 llega la primera competencia de FLL a México gracias a Bárbara Gómez de Navarro, lo que nos permitió participar.</p>
           </div>
-          <div>
-            <p>Con ayuda de la Maestra Lula y el Maestro Carlos, el equipo de \"Robocoons\" comenzó a participar en distintas competencias de robótica, como "NanoQuest", "No Limits" y "Ocean Odyssey". </p>
+          <div className='border-l-2 border-b-2 border-black p-3 ml-64 max-w-2xl'>
+            <p>Con ayuda de la Maestra Lula y el Maestro Carlos, el equipo de &quot;Robocoons&quot; comenzó a participar en distintas competencias de robótica, como &quot;NanoQuest&quot;, &quot;No Limits&quot; y &quot;Ocean Odyssey&quot;.</p>
           </div>
-          <div>
+          <div className='border-l-2 border-b-2 border-black p-3 ml-96 max-w-2xl'>
             <p>A través de los años, distintos estudiantes y profesores se han posicionado en podios Regionales, Naciones e Internacionales, formando así distintos equipos.</p>
           </div>
         </div>
       </section>
-      <section className="gap-4 px-20 flex ">
+
+      <section className="gap-4 p-20 flex ">
         <div className="relative text-center px-6 py-4 rounded-lg shadow-xl overflow-hidden h-full flex flex-col items-center justify-center bg-white">
           <div className="flex items-center justify-center h-16 w-16 rounded-full mx-auto my-6 bg-black">
             <svg stroke="currentColor" fill="currentColor" viewBox="0 0 24 24" className="h-10 w-10 text-white" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
@@ -89,27 +96,28 @@ function App() {
           <p className="mt-2 text-gray-600">Desde febrero de 2001 iniciamos espacios donde no sólo los niños, sino también los jóvenes y adultos pueden trabajar desarrollando ideas poderosas aprendiendo con principios aplicados tanto a la ciencia e ingeniería, como física y matemáticas.</p>
         </div>
       </section>
-      <section>
-        <img src="https://robocoons.vercel.app/robocoons-logo.png" alt="logo" />
-        <img src="https://robocoons.vercel.app/first-lego-logo.png" alt="logo" />
-        <p>
+
+      <section className="flex justify-between items-center px-10">
+        <img src={Logo} alt="logo" className="w-32 h-auto" />
+        <img src={LogoFirstLego} alt="logo" className="w-32 h-auto filter invert" />
+        <p className="mx-2 my-1">
           {year} © Robocoons. All Rights Reserved.
         </p>
         <p>
           © Created by <a href="https://www.isaramdev.com/" target="_blank" rel="noreferrer"> Isabel Ramirez</a>
         </p>
         <a href="https://github.com/IsaRamDev" className="text-base font-normal text-gray-600 dark:text-gray-300" target="_blank" rel="noreferrer">
-          <svg stroke="currentColor" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 16 16" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
             <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"></path>
           </svg>
         </a>
         <a href="https://www.linkedin.com/in/isaramdev/" className="text-base font-normal text-gray-600 dark:text-gray-300" target="_blank" rel="noreferrer">
-          <svg stroke="currentColor" fill="currentColor" viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 16 16" height="2em" width="2em" xmlns="http://www.w3.org/2000/svg">
             <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"></path>
           </svg>
         </a>
       </section>
-    </>
+    </div>
   );
 }
 
