@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="m-o">
       <nav id="navbar" className="flex justify-between items-center w-full pl-10 pr-20 text-lg">
-        <img src={Logo} alt="logo" className="h-32 w-auto" />
+        <img src={Logo} alt="logo" className="h-32 w-auto  mb-[-35px] mt-[-20px]"/>
         <ul className="flex space-x-28">
           <li>
             <a href="#welcome-section">Inicio</a>
@@ -32,17 +32,19 @@ function App() {
       </nav>
       
       <section className="text-center">
-        <a href="https://drive.google.com/file/d/1zHs7kh_D_7befzZAVY0BcfwB2R5L8w4C/view" target="_blank" rel="noreferrer" className="bg-green-500 text-white rounded px-4 py-2 mt-4 hover:bg-green-700 block text-center">
+        <a href="https://drive.google.com/file/d/1zHs7kh_D_7befzZAVY0BcfwB2R5L8w4C/view" target="_blank" rel="noreferrer" className="bg-green-500 text-white rounded py-2 hover:bg-green-800 text-lg h-16 flex items-center justify-center">
           Documentación
         </a>
       </section>
 
-      <section className="text-center">
-        <img src={LogoVertical} alt="Logo" className=' mx-auto' />
-        <img src={Team} alt="main" className="mx-auto" />
+      <section className="text-center relative">
+        <img src={Team} alt="main" className="mx-auto h-3/4 w-3/4 my" />
+        <div className="absolute top-20 left-1/2 transform -translate-x-1/2">
+          <img src={LogoVertical} alt="Logo" className="mx-auto" />
+        </div>
       </section>
 
-      <section className='m-5'>
+      <section className='m-5 mt-20'>
         <h1 className="text-4xl font-bold text-center mb-10">Historia</h1>
         <div className="space-y-10"> 
           <div className='border-l-2 border-b-2 border-black p-3 ml-10 max-w-2xl'>
