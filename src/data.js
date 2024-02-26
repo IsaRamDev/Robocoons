@@ -34,6 +34,32 @@ const data = {
     vertical: LogoVertical,
   },
   teamImage: Team,
+  timelineData: [
+    {
+      date: "Feb, 2002",
+      title: "El origen",
+      main: "Se inició a estudiar la plataforma en Septiembre del 2001.",
+      description: "En Febrero del 2002, el taller de Robótica empezó como el primer taller vespertino impartido por Profesores en el Colegio Las Hayas.",
+    },
+    {
+      date: "2004",
+      title: "FLL en México",
+      main: "Primera competencia de FLL a México",
+      description: "En el 2004 llega la primera competencia de FLL a México gracias a Bárbara Gómez de Navarro, lo que nos permitió participar.",
+    },
+    {
+      date: "May, 2008",
+      title: "Competencias de robótica",
+      main: "NanoQuest, No Limits y Ocean Odyssey.",
+      description: "Con ayuda de la Maestra Lula y el Maestro Carlos, el equipo de &quot;Robocoot; comenzó a participar en distintas competencias de robótica, como &quot;NanoQuest&quot;, &quot;No Limits&quot; y &quot;Ocean Odyssey&quot;.",
+    },
+    {
+      date: "Jun, 2010",
+      title: "Equipos",
+      main: "Formanción de distintos equipos.",
+      description: "A través de los años, distintos estudiantes y profesores se han posicionado en podios Regionales, Naciones e Internacionales, formando así distintos equipos.",
+    },
+  ],
   coaches: [
     { id: 1, image: Coach1, name: "Neftalí", role: "Head Coach" },
     { id: 2, image: Coach2, name: "Ivanka", role: "Coach" },
