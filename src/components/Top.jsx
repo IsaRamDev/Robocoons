@@ -4,13 +4,13 @@ function Top() {
   return (
     <div>
       <section className="text-center relative overflow-hidden bg-black">
-        <img src={data.teamImage} alt="main" className="block mt-[-50px] mb-[-250px] opacity-50" />
-        <div className="absolute top-28 left-1/2 transform -translate-x-1/2">
+        <img src={data.teamImage} alt="main" className="block md:mt-[-50px] mt-[-20px] md:mb-[-250px] mb-[-20px] opacity-50" />
+        <div className="absolute md:top-28 top-48 left-1/2 transform -translate-x-1/2">
           <img src={data.logos.vertical} alt="Logo" className="mx-auto" />
         </div>
       </section>
 
-      <section className="-mt-32 bg-white px-4 pb-20 pt-4">
+      <section className="bg-white px-4 pb-20 pt-4 -mt-8 md:-mt-16 lg:-mt-32">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {data.values.map((value) => (
@@ -24,8 +24,8 @@ function Top() {
                       </svg>
                     </span>
                   </button>
-                  <h5 className="block antialiased tracking-normal font-sans text-xl font-semibold leading-snug text-blue-gray-900 mb-2">{value.title}</h5>
-                  <p className="block antialiased font-sans text-base leading-relaxed font-normal text-blue-gray-600">
+                  <h5 className="block antialiased tracking-normal font-sans md:text-xl text-normal font-semibold leading-snug text-blue-gray-900 mb-2">{value.title}</h5>
+                  <p className="block antialiased font-sans md:text-base text-sm leading-relaxed font-normal text-blue-gray-600">
                     {value.description}
                   </p>
                 </div>

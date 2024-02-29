@@ -3,6 +3,12 @@ import data from '../data.js';
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+  
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,8 +23,8 @@ function Header() {
   return (
       <nav className={`block py-4 w-full max-w-full rounded-none px-4 fixed top-0 z-50 border-0 ${isScrolled ? 'bg-white text-gray-900' : 'bg-transparent text-white'}`}>
         <div className="container mx-auto flex items-center justify-between">
-          <img src={data.logos.main} alt="logo" className="h-32 w-auto  mb-[-30px] mt-[-20px]" />
-          <ul className="ml-10 hidden items-center gap-6 lg:flex font-bold">
+          <img src={data.logos.main} alt="logo" className="md:h-32 h-20 w-auto md:mb-[-30px] md:mt-[-20px] mb-[-10px] mt-[-14px]" />
+          <ul className={`absolute lg:static lg:flex lg:items-center lg:gap-6 ${isMenuOpen ? "top-16 right-4 bg-white text-black shadow-lg" : "-top-full"} transition-top duration-300 ease-in-out text-sm rounded-lg divide-y-2 p-2 divide-gray-200 z-20`}>
             <li>
               <a href="#start" target="_self" className="block antialiased font-sans leading-normal text-inherit">Inicio</a>
             </li>
@@ -45,7 +51,8 @@ function Header() {
                 Documentación</button>
             </a>
           </div>
-          <button className="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30 ml-auto inline-block lg:hidden" type="button">
+          <button onClick={toggleMenu}
+          className="relative align-middle select-none font-sans font-medium text-center uppercase transition-all disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none w-10 max-w-[40px] h-10 max-h-[40px] rounded-lg text-xs text-white hover:bg-white/10 active:bg-white/30 ml-auto inline-block lg:hidden mr-3" type="button">
             <span className="absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className="h-6 w-6">
                 <path d="M3 6.75A.75.75 0 013.75 6h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 6.75zM3 12a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75A.75.75 0 013 12zm0 5.25a.75.75 0 01.75-.75h16.5a.75.75 0 010 1.5H3.75a.75.75 0 01-.75-.75z" ></path>
